@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Receitas da Ana</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>Ana Banana</header>
+
+  <!-- Barra de clima -->
+  <div class="weather-bar">
+    <div class="weather-content">
+      <div>
+        <div class="place" id="place">Detectando cidade...</div>
+        <div class="time" id="time">—</div>
+      </div>
+      <div class="temp">
+        <div class="icon" id="icon">☁️</div>
+        <div class="temp-value" id="temp">--</div>
+        <div class="unit">°C</div>
+      </div>
+    </div>
+    <div style="font-size:12px; color:var(--muted); margin-top:6px;">
+      Sensação térmica: <b id="feels">--</b> °C
+    </div>
+  </div>
+
+  <!-- grade de receitas -->
+  <div class="recipes">
+    <div class="recipe-card" onclick="openRecipe(
+      'Panqueca Fit com Whey',
+      'https://spicyvegg.com/wp-content/uploads/2020/12/DSC01561.jpg',
+      '<h2>Ingredientes</h2><p>4 bananas-maçãs (ou 2 bananas-pratas ou 2 bananas-nanicas) bem maduras</p><p>2 ovos.</p><p>4 colheres de sopa de farinha de amêndoas </p><p>1 scoop de Whey sabor cacau </p><p> 2 colheres de sopa de semente de girassol</p><p>Noz-pecã a gosto</p><p>Mel e frutas vermelhas a gosto</p>   <br><h2> Modo de Preparo:</h2> <p>1-Reúna todos os ingredientes;</p>   <p>2-Em um recipiente, amasse bem as bananas;</p>    <p>3-Adicione os ovos, a farinha, o Whey e as sementes. Misture até incorporar;</p>   <p>4-Unte uma frigideira com um pouco de azeite, deixe aquecer e, em seguida, despeje uma porção da massa;</p>   <p>5-Deixe assar bem e depois vire para dourar o outro lado. Repita o processo até a massa acabar;</p>   <p>Deixe assar bem e depois vire para dourar o outro lado. Repita o processo até a massa acabar;</p>   </br>'
+    )">
+      <img src="https://spicyvegg.com/wp-content/uploads/2020/12/DSC01561.jpg" alt="Receita 1">
+      <div class="recipe-title">Panqueca Fit com Whey</div>
+    </div>
+    <div class="recipe-card" onclick="openRecipe(
+      'Bolinho de cenoura com curry e chia sem glúten',
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSB8c9aQWKrzlArniJ0SAxBaLWmrp_3B6QzLa2XhxGhbvE_ZHv1ZIBYJ5bG1_YvHYgP0dE&usqp=CAU',
+      '<p>Bolinho leve, feito com cenoura, curry e sementes de chia.</p><p>Sem glúten, ideal para dietas saudáveis.</p>'
+    )">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSB8c9aQWKrzlArniJ0SAxBaLWmrp_3B6QzLa2XhxGhbvE_ZHv1ZIBYJ5bG1_YvHYgP0dE&usqp=CAU" alt="Receita 2">
+      <div class="recipe-title">Bolinho de cenoura com curry e chia sem glúten</div>
+    </div>
+
+    <div class="recipe-card" onclick="openRecipe(
+      'Salpicão',
+      'https://www.receiteria.com.br/wp-content/uploads/salpicao-fit-07.jpeg',
+      '<p>Salada leve com frutas, folhas frescas e molho especial.</p><p>Ótima para dias quentes.</p>'
+    )">
+      <img src="https://www.receiteria.com.br/wp-content/uploads/salpicao-fit-07.jpeg" alt="Receita 3">
+      <div class="recipe-title">Salpicão</div>
+    </div>
+
+    <div class="recipe-card" onclick="openRecipe(
+      'Bife de lombo de porco',
+      'https://www.receiteria.com.br/wp-content/uploads/bife-de-lombo-de-porco-rotated.jpeg',
+      '<p>Bife suculento de lombo de porco.</p><p>Sirva com arroz, legumes e molho de sua preferência.</p>'
+    )">
+      <img src="https://www.receiteria.com.br/wp-content/uploads/bife-de-lombo-de-porco-rotated.jpeg" alt="Receita 4">
+      <div class="recipe-title">Bife de lombo de porco</div>
+    </div>
+  </div>
+
+  <!-- barra inferior -->
+  <div class="bottom-bar">
+    <div>🏠<span>Principal</span></div>
+    <div>📖<span>Minhas Receitas</span></div>
+    <div>👤<span>Perfil</span></div>
+  </div>
+
+  <!-- tela de detalhes -->
+  <div id="recipeDetail" class="recipe-detail">
+    <h2 id="detailTitle"></h2>
+    <img id="detailImg" src="" alt="">
+    <div id="detailDesc"></div> <!-- agora é <div> para aceitar HTML -->
+    <button class="close-btn" onclick="closeRecipe()">Voltar</button>
+  </div>
+
+  <!-- chat -->
+  <button id="chat-toggle">Abrir Chat</button>
+  <div id="chat-box">
+      <div id="chat-header">
+          Consultor Online
+          <button id="chat-close">&times;</button>
+      </div>
+      <div id="chat-messages"></div>
+      <div id="chat-input">
+          <input type="text" id="user-input" placeholder="Digite sua mensagem...">
+          <button id="send-btn">Enviar</button>
+      </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
