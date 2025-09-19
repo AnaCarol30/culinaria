@@ -50,13 +50,18 @@ function gotPosition(pos){
   fetchWeather(lat, lon);
 }
 
-if('geolocation' in navigator){
-  navigator.geolocation.getCurrentPosition(gotPosition, ()=> {
-    elPlace.textContent = "Local não encontrado";
-  }, {timeout:8000});
-} else {
-  elPlace.textContent = "Sem geolocalização";
-}
+if ("geolocation" in navigator) {
+    navigator.geolocation.watchPosition(
+      gotPosition,
+      () => {
+        elPlace.textContent = "Local não encontrado";
+      },
+      { enableHighAccuracy: true, timeout: 8000, maximumAge: 0 }
+    );
+  } else {
+    elPlace.textContent = "Sem geolocalização";
+  }
+  
 
 // --- DETALHES DE RECEITA ---
 function openRecipe(title, img, desc){
