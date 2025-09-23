@@ -1,10 +1,10 @@
-:root { --bg:#0f172a; --card:#111827; --text:#e5e7eb; --muted:#9ca3af; }
+:root { --bg:#0f172a; --card:#714e37; --text:#e5e7eb; --muted:#9ca3af; }
     * { box-sizing: border-box; margin:0; padding:0; }
     body {
       min-height: 100vh;
       display: flex;
       flex-direction: column;
-      background: radial-gradient(1200px 800px at 30% 10%, #1f2937, #0b1024), var(--bg);
+      background: radial-gradient(1200px 800px at 30% 10%, #f8f4f5, #c7b6a8), var(--bg);
       color: var(--text);
       font-family: system-ui, sans-serif;
     }
@@ -20,8 +20,8 @@
 
     /* retângulo do clima */
     .weather-bar {
-      background: linear-gradient(180deg, #0b1226, #0a0f1f);
-      border-bottom: 1px solid #1f2937;
+      background: linear-gradient(180deg, #714e37, #593e2c);
+      border-bottom: 1px solid #714e37;
       padding: 16px;
       text-align: center;
       box-shadow: 0 4px 16px rgba(0,0,0,.35);
@@ -36,7 +36,7 @@
     .temp { display:flex; align-items:center; gap:10px; }
     .temp-value {
       font-size: 32px; font-weight: 800;
-      background: linear-gradient(90deg, #93c5fd, #e5e7eb);
+      background: linear-gradient(90deg, #93c5fd, #264b97);
       -webkit-background-clip: text; background-clip: text; color: transparent;
     }
     .unit { font-size: 16px; color: var(--muted); }
@@ -81,8 +81,8 @@
       display: flex;
       justify-content: space-around;
       align-items: center;
-      background: #0c142a;
-      border-top: 1px solid #243045;
+      background: #714e37;
+      border-top: 1px solid c;
       padding: 10px 0;
       position: fixed;
       bottom: 0;
@@ -99,7 +99,7 @@
       cursor: pointer;
     }
     .bottom-bar div:hover {
-      color: #c7d2fe;
+      color: #000000;
     }
 
     /* tela de detalhes */
@@ -136,20 +136,20 @@
       cursor: pointer;
     }
     .close-btn:hover {
-      background: #a5b4fc;
+      background: #000000;
     }
     #chat-toggle {
         position: fixed;
         bottom: 25px;
         right: 25px;
-        background-color: #3b82f6;
+        background-color: #4e4e4e;
         color: white;
         border: none;
         padding: 0.9rem 1.3rem;
         border-radius: 999px;
         font-weight: 600;
         cursor: pointer;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+        box-shadow: 0 4px 12px rgba(239, 227, 227, 0.4);
         z-index: 1000;
         transition: transform 0.3s ease;
     }
@@ -164,7 +164,7 @@
         right: 25px;
         width: 300px;
         height: 400px;
-        background: #1e293b;
+        background: #d4c1b5;
         border-radius: 12px;
         box-shadow: 0 4px 24px rgba(0,0,0,0.6);
         display: none;
@@ -174,7 +174,7 @@
     }
     
     #chat-header {
-        background: #3b82f6;
+        background: #926c52;
         color: white;
         padding: 0.8rem;
         font-weight: bold;
@@ -214,13 +214,13 @@
     
     .user-message {
         align-self: flex-end;
-        background-color: #3b82f6;
+        background-color: #5c5856;
         color: white;
     }
     
     .bot-message {
         align-self: flex-start;
-        background-color: #2d3748;
+        background-color: #926c52;
         color: #ddd;
     }
     
@@ -233,8 +233,8 @@
         flex: 1;
         padding: 0.8rem;
         border: none;
-        background: #0f172a;
-        color: #fff;
+        background: #926c52(222, 17%, 71%);
+        color: #1b1111;
         outline: none;
         font-family: 'Poppins', sans-serif;
     }
@@ -245,7 +245,7 @@
     
     #chat-input button {
         padding: 0.8rem 1rem;
-        background: #2563eb;
+        background: #926c52;
         color: white;
         border: none;
         cursor: pointer;
